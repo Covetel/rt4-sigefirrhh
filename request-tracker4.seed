@@ -1,0 +1,60 @@
+request-tracker4	request-tracker4/pgsql/admin-pass	password	
+request-tracker4	request-tracker4/app-password-confirm	password	
+request-tracker4	request-tracker4/initial-root-password	password	
+request-tracker4	request-tracker4/mysql/admin-pass	password	
+# Contraseña de aplicación MySQL para request-tracker4:
+request-tracker4	request-tracker4/mysql/app-pass	password	
+request-tracker4	request-tracker4/password-confirm	password	
+# Contraseña de aplicación PostgreSQL para request-tracker4:
+request-tracker4	request-tracker4/pgsql/app-pass	password	
+request-tracker4	request-tracker4/internal/reconfiguring	boolean	false
+request-tracker4	request-tracker4/remote/port	string	
+# El tipo de base de datos que se va a utilizar para request-tracker4:
+request-tracker4	request-tracker4/database-type	select	pgsql
+# ¿Desea configurar la base de datos para request-tracker4 con «dbconfig-common»?
+request-tracker4	request-tracker4/dbconfig-install	boolean	true
+request-tracker4	request-tracker4/remove-error	select	abort
+request-tracker4	request-tracker4/install-error	select	abort
+# ¿Desea realizar las actualizaciones de la base de datos de request-tracker4 con «dbconfig-common»?
+request-tracker4	request-tracker4/dbconfig-upgrade	boolean	true
+request-tracker4	request-tracker4/install-cronjobs	boolean	
+# Nombre de usuario  para request-tracker4:
+request-tracker4	request-tracker4/db/app-user	string	rtuser
+request-tracker4	request-tracker4/pgsql/no-empty-passwords	error	
+request-tracker4	request-tracker4/webbaseurl	string	http://rt.mf
+# ¿Desea realizar una copia de seguridad de la base de datos de request-tracker4 antes de actualizar?
+request-tracker4	request-tracker4/upgrade-backup	boolean	true
+request-tracker4	request-tracker4/upgrade-error	select	abort
+request-tracker4	request-tracker4/pgsql/manualconf	note	
+request-tracker4	request-tracker4/correspondaddress	string	rt@rt.mf
+request-tracker4	request-tracker4/internal/skip-preseed	boolean	false
+# ¿Desea purgar la base de datos para request-tracker4?
+request-tracker4	request-tracker4/purge	boolean	false
+request-tracker4	request-tracker4/passwords-do-not-match	error	
+# ¿Desea reinstalar la base de datos para request-tracker4?
+request-tracker4	request-tracker4/dbconfig-reinstall	boolean	false
+# Método de conexión para la base de datos MySQL de request-tracker4:
+request-tracker4	request-tracker4/mysql/method	select	unix socket
+request-tracker4	request-tracker4/mysql/admin-user	string	root
+request-tracker4	request-tracker4/missing-db-package-error	select	abort
+request-tracker4	request-tracker4/commentaddress	string	rt-comment@rt.mf
+request-tracker4	request-tracker4/handle-siteconfig-permissions	boolean	true
+# Nombre del servidor de base de datos  para request-tracker4:
+request-tracker4	request-tracker4/remote/host	select	
+request-tracker4	request-tracker4/webpath	string	/rt
+# Método de conexión para la base de datos PostgreSQL de request-tracker4:
+request-tracker4	request-tracker4/pgsql/method	select	unix socket
+# Servidor dónde se ejecuta el servidor  para request-tracker4:
+request-tracker4	request-tracker4/remote/newhost	string	
+# ¿Desea desconfigurar la base de datos para request-tracker4 con «dbconfig-common»?
+request-tracker4	request-tracker4/dbconfig-remove	boolean	
+request-tracker4	request-tracker4/pgsql/changeconf	boolean	false
+request-tracker4	request-tracker4/pgsql/authmethod-admin	select	ident
+# Nombre de la base de datos  para request-tracker4:
+request-tracker4	request-tracker4/db/dbname	string	rtdb
+# Directorio de almacenaje  para request-tracker4:
+request-tracker4	request-tracker4/db/basepath	string	
+request-tracker4	request-tracker4/pgsql/authmethod-user	select	password
+request-tracker4	request-tracker4/rtname	string	rt.mf.gob.ve
+request-tracker4	request-tracker4/organization	string	rt.mf
+request-tracker4	request-tracker4/pgsql/admin-user	string	postgres
