@@ -17,8 +17,15 @@ sudo apt-get -y install less screen git lsof vim postgresql
 sudo apt-get -y install rt4-db-postgresql rt4-apache2
 sudo apt-get -y install request-tracker4
 
+# Integración con LDAP
+sudo debconf-set-selections /vagrant/slapd.seed
+sudo apt-get -y install slapd ldap-utils rt4-extension-authenexternalauth
+
 # Configuraciones
 rsync -av /vagrant/etc/ /etc/
+
+# Genero la configuracion de RT
+sudo update-rt-siteconfig-4
 
 # Reinicio servicios
 /etc/init.d/apache2 stop

@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANT_VERSION) do |config|
 
     rt.vm.network :forwarded_port, guest: 80, host: 8080
     rt.vm.network :forwarded_port, guest: 443, host: 4443
+    rt.vm.network :forwarded_port, guest: 389, host: 3389
 
   end
 

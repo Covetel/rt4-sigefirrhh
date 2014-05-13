@@ -1,0 +1,40 @@
+Set(@Plugins,(qw(RT::Authen::ExternalAuth)));
+Set($ExternalAuthPriority,  ['My_LDAP']);
+Set($ExternalInfoPriority,  ['My_LDAP']);
+Set($ExternalServiceUsesSSLorTLS,    0);
+Set($AutoCreate, {Privileged => 1, Lang => 'es'});
+Set($AutoCreateNonExternalUsers,    1);
+Set($CreateUncanonicalizedUsers, 1);
+Set(
+    $ExternalSettings,
+    {    # AN EXAMPLE DB SERVICE
+        'My_LDAP' => {    ## GENERIC SECTION
+            'type'          => 'ldap',
+            'server'        => 'localhost',
+            'user'          => 'cn=admin,dc=mf',
+            'pass'          => 'password',
+            'base'          => 'dc=mf',
+            'filter'        => '(objectClass=person)',
+            'd_filter'      => '(shadowInactive=1)',
+            'tls'           => 0,
+	    'ssl_version'   => 3,
+            'net_ldap_args' => [ version => 3 ],
+            'attr_match_list' =>
+		[ 'Name', 'EmailAddress', 'RealName', 'WorkPhone', 'Address2' ],
+		'attr_map' => {
+		    'Name'           => 'uid',
+		    'EmailAddress'   => 'mail',
+		    'Organization'   => 'physicalDeliveryOfficeName',
+		    'RealName'       => 'cn',
+		    'ExternalAuthId' => 'uid',
+		    'Gecos'          => 'gecos',
+		    'WorkPhone'      => 'telephoneNumber',
+		    'Address1'       => 'street',
+		    'City'           => 'l',
+		    'State'          => 'st',
+		    'Zip'            => 'postalCode',
+		    'Country'        => 'st'
+            }
+        }
+    }
+    );
