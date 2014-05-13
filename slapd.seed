@@ -1,8 +1,8 @@
-slapd	slapd/internal/generated_adminpw	password	
-slapd	slapd/password2	password	
-slapd	slapd/internal/adminpw	password	
-slapd	slapd/password1	password	
-slapd	slapd/password_mismatch	note	
+slapd	slapd/internal/generated_adminpw	password
+slapd	slapd/password2	password
+slapd	slapd/internal/adminpw	password
+slapd	slapd/password1	password
+slapd	slapd/password_mismatch	note
 slapd	slapd/invalid_config	boolean	true
 slapd	shared/organization	string	mf
 slapd	slapd/upgrade_slapcat_failure	error	
