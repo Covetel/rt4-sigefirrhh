@@ -57,6 +57,10 @@
   <tr>
     <td class="labeltop"><&|/l&>Requestors</&>:</td>
     <td class="value"><& ShowGroupMembers, Group => $Ticket->Requestors, Ticket => $Ticket &></td>
+    </tr>
+  <tr>
+    <td class="labeltop"><&|/l&>Organismo</&>:</td>
+    <td class="value"><% $Ticket->Requestors->UserMembersObj->First->Organization %></td>
   </tr>
   <tr>
     <td class="labeltop"><&|/l&>Cc</&>:</td>
