@@ -9,22 +9,22 @@ Set(
     $ExternalSettings,
     {    # AN EXAMPLE DB SERVICE
         'My_LDAP' => {    ## GENERIC SECTION
-            'type'          => 'ldap',
-            'server'        => 'localhost',
-            'user'          => 'cn=admin,dc=mf',
-            'pass'          => 'password',
-            'base'          => 'dc=mf',
-            'filter'        => '(objectClass=person)',
-            'd_filter'      => '(shadowInactive=1)',
-            'tls'           => 0,
+	    'type'          => 'ldap',
+	    'server'        => 'localhost',
+	    'user'          => 'cn=admin,dc=mf',
+	    'pass'          => 'password',
+	    'base'          => 'dc=mf',
+	    'filter'        => '(objectClass=person)',
+	    'd_filter'      => '(shadowInactive=1)',
+	    'tls'           => 0,
 	    'ssl_version'   => 3,
-            'net_ldap_args' => [ version => 3 ],
-            'attr_match_list' =>
+	    'net_ldap_args' => [ version => 3 ],
+	    'attr_match_list' =>
 		[ 'Name', 'EmailAddress', 'RealName', 'WorkPhone', 'Address2' ],
 		'attr_map' => {
 		    'Name'           => 'uid',
 		    'EmailAddress'   => 'mail',
-		    'Organization'   => 'physicalDeliveryOfficeName',
+		    'Organization'   => 'o',
 		    'RealName'       => 'cn',
 		    'ExternalAuthId' => 'uid',
 		    'Gecos'          => 'gecos',

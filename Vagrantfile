@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANT_VERSION) do |config|
     rt.vm.host_name = "rt.mf"
 
     rt.vm.provider "virtualbox" do |vb|
-      vb.customize ["modifyvm", :id, "--memory", "1024"]
+      vb.customize ["modifyvm", :id, "--memory", "512"]
       vb.customize ["modifyvm", :id, "--name", "rt" ]
     end
 

@@ -24,6 +24,9 @@ sudo apt-get -y install slapd ldap-utils rt4-extension-authenexternalauth
 # Configuraciones
 rsync -av /vagrant/etc/ /etc/
 
+# Enlace simbólico para las customizaciones
+
+
 # Genero la configuracion de RT
 sudo update-rt-siteconfig-4
 
